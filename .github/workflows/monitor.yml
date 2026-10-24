@@ -16,8 +16,8 @@ on:
   #   过，频率越低越可能真的跑起来，所以这里给的是每小时。
 on:
   schedule:
-    - cron: "23 * * * *"
-    workflow_dispatch: {}
+      - cron: "23 * * * *"
+  workflow_dispatch: {}
 
 permissions:
   contents: read
