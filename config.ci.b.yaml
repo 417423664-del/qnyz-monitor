@@ -1,20 +1,21 @@
-# GitHub Actions 监控组 B：入住 9/7 → 离店 9/12，仅个人，全区
-# 不含密钥；Bark key 由 Actions Secret（BARK_URL）注入。
-
 base_url: "https://qnyz.shyouth.net/qnyzApi"
 verify_ssl: false
 check_availability: true
 concurrency: 10
-
 filters:
   name: ""
   user_type: 2
   apply_scope: "personal"
-  districts: []
-  date_from: "2026-09-11"
-  date_to: "2026-09-14"
+  districts: ["黄浦区", "静安区"]
+  only_stations: ["和光寓外滩店", "卢宛158项目", "友间公寓大统路社区"]
+  date_from: "2026-11-11"
+  date_to: "2026-11-15"
   min_house_count: 0
   min_apply_number: 1
+notify:
+  type: "bark"
+  url: ""
+log_file: ""
 
 notify:
   type: "bark"
