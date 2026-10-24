@@ -61,3 +61,4 @@ jobs:
         env:
           QNYZ_NOTIFY_URL: ${{ secrets.BARK_URL }}
         run: python monitor.py --once --config ${{ matrix.config }}
+        
